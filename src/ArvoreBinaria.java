@@ -151,11 +151,14 @@ public class ArvoreBinaria {
                     reserva.setEsq(atual.getEsq());
                     if (reserva.getDir() != null){ //caso o numero substituindo tenha nó a direita
                         paiReserva.setEsq(reserva.getDir());
+                    } else {
+                        paiReserva.setEsq(null);
                     }
                     reserva.setDir(direita);
                     if (eRaiz){
                         this.raiz = reserva;
                     }
+
                 }
             }
     }
